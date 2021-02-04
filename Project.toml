@@ -3,6 +3,10 @@ uuid = "1e751f03-717a-470e-b05c-23eae93529d4"
 authors = ["tclements <thclements@g.harvard.edu> and contributors"]
 version = "0.1.0"
 
+[deps]
+RecipesBase = "3cdcf5f2-1ef4-517c-9805-6587b60abb01"
+SeisIO = "b372bb87-02dd-52bb-bcf6-c30dd83fd342"
+
 [compat]
 julia = "1"
 
