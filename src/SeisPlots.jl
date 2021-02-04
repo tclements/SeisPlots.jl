@@ -30,7 +30,7 @@ end
             subplot := i 
             label --> S[i].id
             t = u2d.(SeisIO.t_expand(S[i].t,S[i].fs) * SeisIO.μs)
-            if i != S.n 
+            if i != min(S.n,max_traces) 
                 xticks --> Int[]
             end
             t,S[i].x
