@@ -4,6 +4,8 @@ authors = ["tclements <thclements@g.harvard.edu> and contributors"]
 version = "0.1.0"
 
 [deps]
+DSP = "717857b8-e6f2-59f4-9121-6e50c889abd2"
+Dates = "ade2ca70-3891-5945-98fb-dc099432e06a"
 RecipesBase = "3cdcf5f2-1ef4-517c-9805-6587b60abb01"
 SeisIO = "b372bb87-02dd-52bb-bcf6-c30dd83fd342"
 

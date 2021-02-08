@@ -1,6 +1,9 @@
 module SeisPlots
 
-using SeisIO, RecipesBase
+using SeisIO, RecipesBase, Dates
+import DSP
+
+include("spectrogram.jl")
 
 @recipe function f(C::SeisChannel; max_npts=400000)
     label --> C.id
@@ -13,7 +16,7 @@ using SeisIO, RecipesBase
 end
 
 @recipe function f(S::SeisData; max_npts=400000, max_traces=10)
-    layout := (S.n,1)
+    layout := (min(S.n,max_traces),1)
     seriescolor --> :black
 
     # get minumum and maximum times 
