@@ -5,7 +5,7 @@ import DSP
 
 include("spectrogram.jl")
 
-@recipe function f(C::SeisChannel; max_npts=400000)
+@recipe function f(C::GphysChannel; max_npts=400000)
     label --> C.id
     seriescolor --> :black
     legendfontsize --> 8 
@@ -15,7 +15,7 @@ include("spectrogram.jl")
     t, C.x
 end
 
-@recipe function f(S::SeisData; max_npts=400000, max_traces=10)
+@recipe function f(S::GphysData; max_npts=400000, max_traces=10)
     layout := (min(S.n,max_traces),1)
     seriescolor --> :black
 
